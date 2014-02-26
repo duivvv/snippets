@@ -1,1 +1,4 @@
-test.*
+php/test.php
+js/test.js
+html/test.html
+.DS_Store

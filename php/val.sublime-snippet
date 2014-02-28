@@ -1,10 +1,10 @@
 <snippet>
 	<content><![CDATA[
-\$${1:name} = "";
+\$vals["${1:name}"] = "";
 if(empty(\$_POST["${1:name}"])){
-	\$errors['${1:name}'] = "${2:error}";
+	\$errors["${1:name}"] = "${2:error}";
 }else{
-	\$${1:name} = \$_POST['${1:name}'];
+	\$vals["${1:name}"] = \$_POST["${1:name}"];
 }
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

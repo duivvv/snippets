@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+public function delete${1:table}(\$id){
+    \$sql = "DELETE FROM `${1/[A-Z]/\L$0/:table}s` 
+    		WHERE `id` = :id";
+    \$stmt = $this->pdo->prepare($sql);
+    \$stmt->bindValue(":id",\$id);
+    if(\$stmt->execute()){
+        return true;
+    }
+    return false;
+}${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>del</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

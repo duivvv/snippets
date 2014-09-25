@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 echo "<pre>";
-var_dump(${1:var});
+var_dump(\$${1:var});
 echo "</pre>";
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

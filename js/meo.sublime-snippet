@@ -1,11 +1,11 @@
 <snippet>
 	<content><![CDATA[
-function ${1:name}(${2}){
+module.exports = {
 	${0}
-}
+};
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>func</tabTrigger>
+	<tabTrigger>meo</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.js</scope>
 </snippet>

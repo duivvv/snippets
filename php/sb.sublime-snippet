@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+public function selectBy${2:Id}(\$${2/[A-Z]/\L$0/:id}) {
+	\$sql = "SELECT * 
+					FROM `${1:table}` 
+					WHERE `${2/[A-Z]/\L$0/:id}` = :${2/[A-Z]/\L$0/:id}";
+	\$stmt = \$this->pdo->prepare(\$sql);
+	\$stmt->bindValue(':${2/[A-Z]/\L$0/:id}', \$${2/[A-Z]/\L$0/:id});
+	\$stmt->execute();
+	\$result = \$stmt->fetch(PDO::FETCH_ASSOC);
+	if(\$result){
+		return \$result;
+	}
+	return [];
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sb</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

@@ -1,12 +1,14 @@
 <snippet>
 	<content><![CDATA[
-\$sql = "SELECT ${1:columns} FROM `${2:table}`${3}";
-\$stmt = \$pdo->prepare(\$sql);${4}
-\$stmt->execute();
-\$${5:var} = \$stmt->${6:fetchAll}(PDO::FETCH_ASSOC);${0}
+public function selectAll() {
+  \$sql = "SELECT * FROM `${1:table}`";
+  \$stmt = \$this->pdo->prepare(\$sql);
+  \$stmt->execute();
+  return \$stmt->fetchAll(PDO::FETCH_ASSOC);
+}${0}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>sel</tabTrigger>
+	<tabTrigger>sa</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.php</scope>
 </snippet>

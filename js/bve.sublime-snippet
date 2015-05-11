@@ -1,9 +1,23 @@
 <snippet>
 	<content><![CDATA[
-requestAnimationFrame(${1:func});
+var ${1:Name}View = Backbone.View.extend({
+
+	el: '${2:element}',
+	
+	events: {
+		${3}
+	},
+
+	initialize: function(){
+		${0}
+	}
+
+});
+
+module.exports = ${1:Name}View;
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>raf</tabTrigger>
+	<tabTrigger>bve</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.js</scope>
 </snippet>

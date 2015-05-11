@@ -1,7 +1,8 @@
 <snippet>
 	<content><![CDATA[
 public function get${1:table}${2:s}(${3}){
-    \$sql = "SELECT ${4:*} FROM `${1/[A-Z]/\L$0/:table}${2:s}`${5}";
+    \$sql = "SELECT ${4:*} 
+            FROM `${1/[A-Z]/\L$0/:table}${2:s}`${5}";
     \$stmt = \$this->pdo->prepare($sql);${6}
     if(\$stmt->execute()){
         \$${1/[A-Z]/\L$0/:table}${2:s} = $stmt->${7:fetchAll}(PDO::FETCH_ASSOC);

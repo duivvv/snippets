@@ -1,10 +1,3 @@
-function (error, data){
-	if(error){
-		console.log(error.message);
-	}
-	if(data){
-		if(data.length === 0){
-			return cb(new Error("there is no data"));
-		}
-	}
-}
+[].forEach.call(document.querySelectorAll('.link'), function(link) {
+	console.log(link);
+});

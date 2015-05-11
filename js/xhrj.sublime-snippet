@@ -1,9 +1,15 @@
 <snippet>
 	<content><![CDATA[
-requestAnimationFrame(${1:func});
+var xhr = new XMLHttpRequest();
+xhr.addEventListener('load', function(){
+	var data = JSON.parse(xhr.responseText);
+	console.log(data);${0}
+});
+xhr.open('${1:GET}', ${2:url});
+xhr.send(${3});
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<tabTrigger>raf</tabTrigger>
+	<tabTrigger>xhrj</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->
 	<scope>source.js</scope>
 </snippet>

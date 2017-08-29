@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+let ${1:ref} = this.refs.${1:ref}.value.trim();${0}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>gv</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
